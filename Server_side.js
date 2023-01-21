@@ -2,6 +2,7 @@
 var express = require('express');
 var app = express();
 app.use(express.static('public'));
+const port = process.env.PORT || 2000
 
 
 // mongodb connection
@@ -11,7 +12,7 @@ const uri = "mongodb+srv://Bodo:Bodo0101@cluster0.ph9lr1p.mongodb.net/?retryWrit
 const client = new MongoClient(uri)
 
 //host listening
-app.listen(2000,  () => console.log("Server is running! (listening on port " +  ")") )
+app.listen(port,  () => console.log("Server is running! (listening on port " +  port) )
 
 
 
