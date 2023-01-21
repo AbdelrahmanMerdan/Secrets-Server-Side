@@ -43,6 +43,7 @@ app.use(express.static("Combine"))
 app.get('/hello' , (req, res) => {
     
     res.header("Access-Control-Allow-Origin", "*");
+    console.log("hey")
 
     res.send('hello')
 
