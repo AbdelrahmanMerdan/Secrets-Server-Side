@@ -38,7 +38,62 @@ var user = users.user1
 
 app.use(express.static("Combine"))
 
-//add
+app.get('/login', (req, res) => {
+    
+    res.header("Access-Control-Allow-Origin", "*");
+
+    var z = JSON.parse(req.query['data'])
+
+    var usern = z["user"]
+    var pass = z["pass"]
+
+    const finduser = client.db("Secrets").collection("Users").find({Username: usern})
+        .toArray()
+        .then((response) => {
+            return response
+        })
+
+    const checkUsers = () => {
+            finduser.then((usersfound) => {
+            
+                if(usersfound.length == 0){
+                    console.log("empty no user with username")
+                    var jsontext = JSON.stringify({
+                            'action': z['action'],
+                            'flag': false,
+                        });
+                        
+                        res.send(jsontext)
+
+                }
+
+                else{
+                    if(usersfound[0].Password == pass){
+                        user = usersfound[0]
+                        console.log(user)
+                        var jsontext = JSON.stringify({
+                            'action': z['action'],
+                            'flag': true,
+                    })
+                    res.send(jsontext)
+                }
+                else{
+                    var jsontext = JSON.stringify({
+                        'action': z['action'],
+                        'flag': false,
+                })
+                console.log("Wrong Pass")
+                res.send(jsontext)
+
+                }
+                    
+                
+                }
+            })
+    }
+
+     checkUsers()
+})
 
 app.get('/hello' , (req, res) => {
     
