@@ -40,7 +40,7 @@ app.use(express.static("Combine"))
 
 
 // Login and Signup
-app.post('/login', (req, res) => {
+app.get('/login', (req, res) => {
     
     res.header("Access-Control-Allow-Origin", "*");
 
