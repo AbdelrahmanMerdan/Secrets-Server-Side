@@ -12,7 +12,7 @@ const uri = "mongodb+srv://Bodo:Bodo0101@cluster0.ph9lr1p.mongodb.net/?retryWrit
 const client = new MongoClient(uri)
 
 //host listening
-app.listen(0.0.0.0:$PORT,  () => console.log("Server is running! (listening on port " +  port) )
+app.listen(3000, '0.0.0.0',  () => console.log("Server is running! (listening on port "  )
 
 
 
