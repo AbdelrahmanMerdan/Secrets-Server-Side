@@ -404,7 +404,7 @@ app.post('/w' , (req, res) => {
    
 })
 
-app.post('/hello' , (req, res) => {
+app.get('/hello' , (req, res) => {
     
     res.header("Access-Control-Allow-Origin", "*");
 
