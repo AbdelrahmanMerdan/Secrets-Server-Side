@@ -13,5 +13,5 @@ The programs backend was built using JavaScript, Node.js, MongoDB, the web-based
 </ul>
 
 <hr>
-<h1> The Darabase </h1>
+<h1> The Database </h1>
 Every Users data is secur
