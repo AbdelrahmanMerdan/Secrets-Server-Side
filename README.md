@@ -15,6 +15,8 @@ The programs backend was built using JavaScript, Node.js, MongoDB, Railway app a
 <hr>
 <h1> How it works!</h1>
 When a user signs up to the website, a new user is created and sent to the MongoDB server. This information includes their username, password, and a list of journal entrys. 
+<img src="/mongodb-24.png" alt="Alt text" title="Optional title">
+
 When the user attempts to create a journal, the information that is typed in is sent to an endpoint that checks the database to see if the user alraedy has a journal with the same title. If a prexisting journal exists, then the user will be prompted to change the title, if not then the database will be updated with the new entry. Once the user goes back to their homepage, information will be sent to another endpoint where it enters the database to retrieve the list of journals. The journals are then displayed onto the homepage with its unique cover.
 <br>
 The interaction between the front end and back end allows for information to be updated, stored and verified at all steps of the user experience. This allows for seemless connectivity between the user and their journals.
