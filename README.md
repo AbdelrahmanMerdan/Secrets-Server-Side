@@ -12,8 +12,6 @@ The programs backend was built using JavaScript, Node.js, MongoDB, Railway app a
 <li>Github Pages</li>
 </ul>
 
-When a user signs up to the website, a new user is created and sent to the MongoDB server. This information includes their username, password, and a list of journal entrys. When the user attempts to create a journal, the information that is typed in is sent to an endpoint that checks the database to see if the user alraedy has a journal with the same title. If a prexisting journal exists, then the user will be prompted to change the title, if not then the database will be updated with the new entry. Once the user goes back to their homepage, information will be sent to another endpoint where it enters the database to retrieve the list of journals. The journals are then displayed onto the homepage with its unique cover.
-
 <hr>
 <h1> How it works!</h1>
 When a user signs up to the website, a new user is created and sent to the MongoDB server. This information includes their username, password, and a list of journal entrys. 
